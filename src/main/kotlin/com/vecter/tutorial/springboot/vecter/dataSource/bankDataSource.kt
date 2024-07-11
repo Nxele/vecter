@@ -1,5 +1,7 @@
 package com.vecter.tutorial.springboot.vecter.dataSource
 
-interface bankDataSource {
+import com.vecter.tutorial.springboot.vecter.model.Bank
 
+interface bankDataSource {
+    fun getBanks() : Collection<Bank>
 }
