@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController
 class HelloWorldController {
     @GetMapping
     fun helloWord() : String{
-        return "Hello code king welcome to spring boot"
+        return "Hello vecter king welcome to spring boot"
     }
 }
