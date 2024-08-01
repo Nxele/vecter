@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 class mockBankDataSource : bankDataSource {
     var banks = listOf(
         Bank("12345",2,7),
-        Bank("54321",8,9),
+        Bank("54321",5,9),
         Bank("67890",4,100)
     )
 

@@ -12,10 +12,10 @@ class mockBankDataSourceTest{
         
         
         // when
-        val banks = mockDataSource.retrieveBanks()
+        val banks = mockDataSource.retrieveBanks() // get all the mocking data
         
         // then
-        assertThat(banks.size).isGreaterThanOrEqualTo(3)
+        assertThat(banks.size).isGreaterThanOrEqualTo(3) // this assert check if the bank list has >= 3 records
     }
     @Test
     fun `should provide some mock data`(){
@@ -23,12 +23,12 @@ class mockBankDataSourceTest{
 
         
         // when
-        val banks = mockDataSource.retrieveBanks()
+        val banks = mockDataSource.retrieveBanks() // get all the mocking data
         
         // then
-        assertThat(banks).allMatch { it.accountNumber.isNotBlank() }
-        assertThat(banks).allMatch {it.trust != 0 }
-        assertThat(banks).allMatch {it.transactionFee != 0}
+        assertThat(banks).allMatch { it.accountNumber.isNotBlank() } // test if no blanks on the account number
+        assertThat(banks).allMatch {it.trust != 0 } // test if all trust doesn't have a zero
+        assertThat(banks).allMatch {it.transactionFee != 0} // test if all transactionFee doesn't have records with zero
     }
     
 }
