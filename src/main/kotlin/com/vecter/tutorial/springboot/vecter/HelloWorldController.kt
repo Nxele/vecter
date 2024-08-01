@@ -20,8 +20,5 @@ class HelloWorldController {
     }
 
     @GetMapping("/banker")
-    fun getBanker() : Collection<Bank>{
-        val bankers = mockBankDataSource().retrieveBanks()
-        return bankers
-    }
+    fun getBanker() : Collection<Bank> = mockBankDataSource().retrieveBanks()
 }
